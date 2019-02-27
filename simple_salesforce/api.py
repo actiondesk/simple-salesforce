@@ -709,7 +709,7 @@ class SFType(object):
         * headers -- a dict with additional request headers.
         """
         result = self._call_salesforce(
-            method='PATCH', url=urljoin(self.base_url, record_id),
+            method='POST', url=urljoin(self.base_url, record_id),
             data=json.dumps(data), headers=headers
         )
         return self._raw_response(result, raw_response)
